@@ -1,0 +1,13 @@
+<div class="container">
+  <app-cockpit (serverCreated)="onServerCreated($event)" (bluePrintCreated)="onBluePrintCreated($event)"></app-cockpit>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server-element *ngFor="let serverElement of serverElements" [element]="serverElement">
+        <p #contentRef>
+          <strong *ngIf="serverElement.type == 'server'" style="color: red;">{{serverElement.content}}</strong>
+          <em *ngIf="serverElement.type == 'BluePrint'">{{serverElement.content}}</em>
+        </p>
+      </app-server-element>
+    </div>
+  </div>
+</div>
