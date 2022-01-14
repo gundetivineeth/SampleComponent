@@ -8,7 +8,7 @@ import { Component, ElementRef, EventEmitter, OnChanges, OnInit, Output, SimpleC
 })
 export class CockpitComponent implements OnInit, OnChanges{
   ngOnInit(): void {
-    console.log("In ngInit");
+    console.log("In ngInit CockPit");
   }
   
   @Output() serverCreated = new EventEmitter<{name:string,content:string}>();
@@ -19,7 +19,7 @@ export class CockpitComponent implements OnInit, OnChanges{
   serverContent = '';
 
   ngOnChanges(change: SimpleChanges){
-    console.log("In ngOnchanges")
+    console.log("In ngOnchanges CockPit")
     console.log("changes "+ change);
   }
 
